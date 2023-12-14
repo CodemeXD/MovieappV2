@@ -1,0 +1,11 @@
+
+MovieCard : A card with all the info on the film
+
+MovieList : it contains properties on the various films 
+
+Filter : a filter component that filters films according to title 
+
+
+-the user should be able to add a new movie 
+
+-the user should be filter the movies with title or rating
