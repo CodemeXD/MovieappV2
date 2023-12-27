@@ -1,0 +1,8 @@
+
+
+-chaque card doit être dans une balise link pour faire le routage 
+
+- Lorsqu'on clique sur l'une des cards , on est rediriger vers une page de description 
+ou l'on a la bande annonce du film et la description
+
+On peut evenir à la page d'accueil lorsque nous somme sur la page de description 

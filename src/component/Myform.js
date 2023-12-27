@@ -12,6 +12,7 @@ import React, { useState } from "react";
             description: "",
             rate: "",
             poster: "",
+            trailer:"",
           });
 
 
@@ -25,6 +26,7 @@ import React, { useState } from "react";
   const handleSubmit = (e) => {
     e.preventDefault();
 
+  
     //Props de fonction contenant toutes les informations saisi dans le formulaire 
     onAddMovie(formdata)
 
@@ -35,9 +37,10 @@ import React, { useState } from "react";
       description: "",
       rate: "",
       poster: "",
+      trailer:"",
     })
 
- 
+    
   };
 
   return (
@@ -53,23 +56,29 @@ import React, { useState } from "react";
               name="title"
               id="title"
               onChange={handleChange}
+              value={formdata.title} 
             />
           </div>
 
           <div className="col-md-5">
             <label htmlFor="description">Description </label>
-            <Form.Control
+            <Form.Control as="textarea"
+              rows={1}
               type="text"
               placeholder="Enter description"
               name="description"
               id="description"
               onChange={handleChange}
+              value={formdata.description}
             />
           </div>
         </div>
 
+       
+
+
         <div className="row secondeLine">
-          <div className="col-md-6 firstPunt">
+          <div className="col-md-4 firstPunt">
             <label htmlFor="rate"> Rate </label>
             <Form.Control
               type="number"
@@ -77,10 +86,11 @@ import React, { useState } from "react";
               name="rate"
               id="rate"
               onChange={handleChange}
+              value={formdata.rate}
             />
           </div>
 
-          <div className="col-md-5">
+          <div className="col-md-4">
             <label htmlFor="poster">film poster</label>
             <Form.Control
               type="text"
@@ -88,6 +98,19 @@ import React, { useState } from "react";
               name="poster"
               id="poster"
               onChange={handleChange}
+              value={formdata.poster}
+            />
+          </div>
+
+          <div className="col-md-3">
+            <label htmlFor="poster">trailer url </label>
+            <Form.Control
+              type="text"
+              placeholder="Enter url trailer"
+              name="trailer"
+              id="trailer"
+              onChange={handleChange}
+              value={formdata.trailer}
             />
           </div>
         </div>
